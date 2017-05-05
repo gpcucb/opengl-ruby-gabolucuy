@@ -116,7 +116,7 @@ def display
 
 
   glFlush
-   #sleep(20)
+   sleep(5)
   #para evitar que el ciclo siga corriendo
 end
 puts ("Hola Mundo!")
