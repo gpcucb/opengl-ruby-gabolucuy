@@ -47,8 +47,8 @@ def display
   glPushMatrix()
   glTranslatef(-(BODY_WIDTH)/2,(BODY_HEIGHT-ARM_HEIGHT)/2,0)
   glTranslatef(0,ARM_HEIGHT/2,0)
-  glRotatef(-30,0,0,1)
-  glTranslatef(0,-ARM_HEIGHT/2,0)
+  glRotatef(-140,0,0,1)
+  glTranslatef(0.3,-ARM_HEIGHT/2+0.8,0)
   glPushMatrix()
   glScalef(ARM_WIDTH,ARM_HEIGHT,ARM_LENGTH)
   glutSolidCube(1)
@@ -64,8 +64,8 @@ def display
   glPushMatrix()
   glTranslatef((BODY_WIDTH)/2,(BODY_HEIGHT-ARM_HEIGHT)/2,0)
   glTranslatef(0,ARM_HEIGHT/2,0)
-  glRotatef(30,0,0,1)
-  glTranslatef(0,-ARM_HEIGHT/2,0)
+  glRotatef(140,0,0,1)
+  glTranslatef(-0.3,-ARM_HEIGHT/2+0.8,0)
   glPushMatrix()
   glScalef(ARM_WIDTH,ARM_HEIGHT,ARM_LENGTH)
   glutSolidCube(1)
@@ -116,8 +116,9 @@ def display
 
 
   glFlush
+
    sleep(5)
-  #para evitar que el ciclo siga corriendo
+
 end
 puts ("Hola Mundo!")
 
