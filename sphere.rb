@@ -39,16 +39,19 @@ def display
     # Borramos el buffer de color y el Z-Buffer
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
+    #ojo centro up
+    
+    gluLookAt(0,0,0,0,0,-1400,0,1,0)
     gluPerspective(40.0,1.0,1.0,100.0)
     # Proyección perspectiva. El ángulo de visualización es de 60 grados, la razón ancho/alto es 1 (son inguales), la distancia mínima es z=1.0, y la distancia máxima es z=100.0
     glMatrixMode(GL_MODELVIEW)
     glTranslatef(0.0,0.0,-4.0)       
-    
-    glMaterial(GL_FRONT, GL_AMBIENT, ambient)
-	glMaterial(GL_FRONT, GL_DIFFUSE, diffuse)
+
+    # glMaterial(GL_FRONT, GL_AMBIENT, ambient)
+	# glMaterial(GL_FRONT, GL_DIFFUSE, diffuse)
 	glMaterialfv(GL_FRONT, GL_SPECULAR, specular)
 	glMaterialfv(GL_FRONT, GL_SHININESS, shininess)
-	glMaterialfv(GL_FRONT, GL_EMISSION, emission)
+	# glMaterialfv(GL_FRONT, GL_EMISSION, emission)
     
     
     # Dibujamos la esfera 1
