@@ -27,9 +27,10 @@ def display
     position = [150.0, 150.0, 250.0]
     color = [1.0,1.0,1.0]
     ambient = [0.2,0.2,0.2,0.1]
-	diffuse = [0.2, 0.5, 0.8, 1.0]
+	diffuse = [0.8, 0.8, 0.8, 1.0]
 	specular = [1,1,1,1.0]
-	shininess = [100.0]
+	shininess = [128.0]
+    emission = [0,0,0,1]
     glLightfv(GL_LIGHT0,GL_POSITION,position)
     glLightfv(GL_LIGHT0,GL_DIFFUSE,color)
     glLightfv(GL_LIGHT0,GL_SPECULAR,color)
@@ -43,11 +44,11 @@ def display
     glMatrixMode(GL_MODELVIEW)
     glTranslatef(0.0,0.0,-4.0)       
     
-    # glMaterial(GL_FRONT_AND_BACK, GL_AMBIENT, ambient)
-	# glMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse)
-	glMaterial(GL_FRONT_AND_BACK, GL_SPECULAR, specular)
-	glMaterial(GL_FRONT_AND_BACK, GL_SHININESS, shininess)
-	 
+    glMaterial(GL_FRONT, GL_AMBIENT, ambient)
+	glMaterial(GL_FRONT, GL_DIFFUSE, diffuse)
+	glMaterialfv(GL_FRONT, GL_SPECULAR, specular)
+	glMaterialfv(GL_FRONT, GL_SHININESS, shininess)
+	glMaterialfv(GL_FRONT, GL_EMISSION, emission)
     
     
     # Dibujamos la esfera 1
